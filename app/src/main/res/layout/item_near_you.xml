@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="100dp"
+    android:layout_width="match_parent"
+    android:paddingTop="19dp"
+    android:paddingStart="16dp"
+    android:paddingEnd="16dp">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_shop"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        app:cardCornerRadius="15dp"
+        app:cardBackgroundColor="@color/colorLightGray">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageView
+                android:id="@+id/image_shop"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerInside"
+                android:contentDescription="Shop picture"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/text_name_shop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Shop Name"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        android:layout_alignTop="@id/card_shop"
+        android:layout_toEndOf="@id/card_shop"
+        android:layout_marginStart="10dp"/>
+
+    <TextView
+        android:id="@+id/text_schedule"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="09:00 - 10:00"
+        android:textStyle="bold"
+        android:textColor="@color/colorMediumGray"
+        android:layout_below="@id/text_name_shop"
+        android:layout_alignStart="@id/text_name_shop" />
+
+    <ImageView
+        android:id="@+id/image_star"
+        android:layout_width="15sp"
+        android:layout_height="15sp"
+        android:tint="@android:color/black"
+        android:src="@drawable/ic_baseline_star_24"
+        android:layout_below="@id/text_schedule"
+        android:layout_alignStart="@id/text_schedule" />
+
+    <TextView
+        android:id="@+id/text_ratings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="5.0"
+        android:textSize="12sp"
+        android:textColor="@android:color/black"
+        android:layout_below="@id/text_schedule"
+        android:layout_toEndOf="@id/image_star"
+        android:layout_alignBottom="@id/image_star"/>
+
+    <TextView
+        android:id="@+id/text_line"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="|"
+        android:textSize="12sp"
+        android:textColor="@android:color/black"
+        android:layout_below="@id/text_schedule"
+        android:layout_toEndOf="@id/text_ratings"
+        android:layout_alignBottom="@id/text_ratings"
+        android:layout_marginStart="7dp"/>
+
+
+    <ImageView
+        android:id="@+id/image_place"
+        android:layout_width="15sp"
+        android:layout_height="15sp"
+        android:src="@drawable/ic_baseline_place_24"
+        android:tint="@android:color/black"
+        android:layout_below="@id/text_schedule"
+        android:layout_alignBottom="@id/image_star"
+        android:layout_toEndOf="@id/text_line"
+        android:layout_marginStart="7dp"
+        android:contentDescription="Place logo" />
+
+    <TextView
+        android:id="@+id/text_place"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1.0 km"
+        android:textSize="12sp"
+        android:textColor="@android:color/black"
+        android:layout_below="@id/text_schedule"
+        android:layout_toEndOf="@id/image_place"
+        android:layout_alignBottom="@id/image_star"/>
+
+</RelativeLayout>
