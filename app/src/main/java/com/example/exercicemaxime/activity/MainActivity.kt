@@ -40,7 +40,7 @@ class MainActivity : AppCompatActivity() {
         productAdapter = ProductAdapter(this, mutableListOf())
         shopAdapter = ShopAdapter(this, mutableListOf())
 
-        productRecyclerView.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
+        productRecyclerView.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, true)
         productRecyclerView.adapter = productAdapter
         shopRecyclerView.layoutManager = LinearLayoutManager(this)
         shopRecyclerView.adapter = shopAdapter
