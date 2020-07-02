@@ -66,8 +66,9 @@ class ProductAdapter(val ctx: Context , private val dataSet: MutableList<Product
     override fun onBindViewHolder(holder: ProductViewHolder, position: Int) {
 
         val item = dataSet[position]
+
         holder.titleText.text = item.title
-        holder.priceText.text = "$" + item.price.toString()
+        holder.priceText.text = "$" + "%.2f".format(item.price)
 
         Glide.with(context).clear(holder.pictureImage)
 

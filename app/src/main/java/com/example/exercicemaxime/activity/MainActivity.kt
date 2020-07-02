@@ -31,7 +31,6 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
         textView = findViewById(R.id.text_nbshops)
 
         productRecyclerView = findViewById(R.id.recycler_top_selling)
@@ -40,7 +39,7 @@ class MainActivity : AppCompatActivity() {
         productAdapter = ProductAdapter(this, mutableListOf())
         shopAdapter = ShopAdapter(this, mutableListOf())
 
-        productRecyclerView.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, true)
+        productRecyclerView.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
         productRecyclerView.adapter = productAdapter
         shopRecyclerView.layoutManager = LinearLayoutManager(this)
         shopRecyclerView.adapter = shopAdapter

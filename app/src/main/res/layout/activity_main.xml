@@ -7,7 +7,27 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-
+    <ImageButton
+        android:id="@+id/imagebutton_list"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:scaleType="fitXY"
+        android:background="@android:color/transparent"
+        android:src="@drawable/ic_baseline_short_text_24"
+        android:layout_marginStart="11dp"
+        android:layout_marginTop="10dp"
+        android:contentDescription="menu button" />
+    <ImageButton
+        android:id="@+id/imagebutton_cart"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@android:color/transparent"
+        android:src="@drawable/ic_outline_shopping_cart_24"
+        android:scaleType="centerInside"
+        android:layout_alignBottom="@id/imagebutton_list"
+        android:layout_alignTop="@id/imagebutton_list"
+        android:layout_alignEnd="@id/scroll_view"
+        android:contentDescription="Cart button" />
     <TextView
         android:id="@+id/text_hello"
         android:layout_width="wrap_content"
@@ -15,11 +35,13 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:text="Hey Alex,"
+        android:textColor="@color/colorLightBlack"
+        android:textSize="25dp"
         android:textStyle="bold"
-        android:textColor="@android:color/black"
-        android:textSize="20dp" />
+        android:layout_below="@id/imagebutton_list"/>
 
     <androidx.core.widget.NestedScrollView
+        android:id="@+id/scroll_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/text_hello"
@@ -42,20 +64,24 @@
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/card_search"
-                android:layout_width="385dp"
+                android:layout_width="wrap_content"
                 android:layout_height="40dp"
                 android:layout_below="@id/text_find_fruit"
                 android:layout_centerHorizontal="true"
-                android:layout_marginTop="12dp"
-                app:cardCornerRadius="30dp"
-                app:cardBackgroundColor="@color/colorLightGray">
+                android:layout_marginTop="35dp"
+                android:layout_alignStart="@id/text_top_selling"
+                android:layout_alignEnd="@id/button_see_all"
+                app:cardCornerRadius="10dp"
+                app:cardBackgroundColor="@color/colorLightGray"
+                app:cardElevation="0dp">
                 <SearchView
                     android:id="@+id/search_view"
-                    android:layout_width="385dp"
+                    android:layout_width="match_parent"
                     android:layout_height="40dp"
                     android:iconifiedByDefault="false"
-                    android:queryHint="Search fresh fruit"
-                    android:layout_below="@id/text_find_fruit" />
+                    android:queryHint="Search fresh fruits"
+                    android:layout_below="@id/text_find_fruit"
+                    android:queryBackground="@android:color/transparent" />
             </androidx.cardview.widget.CardView>
 
             <TextView
@@ -65,10 +91,10 @@
                 android:layout_alignStart="@id/text_find_fruit"
                 android:text="Top Selling"
                 android:textStyle="bold"
-                android:textColor="@android:color/black"
+                android:textColor="@color/colorLightBlack"
                 android:textSize="20dp"
                 android:layout_below="@id/card_search"
-                android:layout_marginTop="12dp"/>
+                android:layout_marginTop="22dp"/>
 
             <Button
                 android:id="@+id/button_see_all"
@@ -76,18 +102,19 @@
                 android:layout_height="30dp"
                 android:layout_below="@id/card_search"
                 android:layout_alignTop="@id/text_top_selling"
-                android:layout_alignEnd="@id/card_search"
+                android:layout_alignParentEnd="true"
                 android:background="@android:color/transparent"
-                android:text="See all"
+                android:text="See All"
                 android:textAllCaps="false"
-                android:textColor="@android:color/black" />
+                android:textColor="@color/colorSeeAll"
+                android:layout_marginEnd="16dp"/>
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/recycler_top_selling"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/text_top_selling"
-                android:layout_marginTop="12dp" />
+                android:layout_marginTop="10dp" />
 
             <TextView
                 android:id="@+id/text_near_you"
@@ -95,9 +122,9 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/recycler_top_selling"
                 android:layout_alignStart="@id/text_top_selling"
-                android:layout_marginTop="40dp"
+                android:layout_marginTop="15dp"
                 android:text="Near You"
-                android:textColor="@android:color/black"
+                android:textColor="@color/colorLightBlack"
                 android:textSize="20dp"
                 android:textStyle="bold" />
 
@@ -107,7 +134,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/text_near_you"
                 android:layout_alignStart="@id/text_top_selling"
-                android:text="28+ shops"
+                android:text="0 shops"
                 android:textColor="@color/colorMediumGray"/>
 
             <androidx.recyclerview.widget.RecyclerView
@@ -115,7 +142,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/text_nbshops"
-                android:layout_marginTop="20dp"
                 android:scrollbars="vertical" />
 
         </RelativeLayout>

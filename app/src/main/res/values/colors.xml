@@ -6,4 +6,6 @@
     <color name="colorLightGray">#f5f5f5</color>
     <color name="colorMediumGray">#929292</color>
     <color name="cardViewColor">#FFFFFF</color>
+    <color name="colorLightBlack">#272727</color>
+    <color name="colorSeeAll">#505050</color>
 </resources>
