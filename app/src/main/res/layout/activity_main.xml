@@ -92,7 +92,7 @@
                 android:text="Top Selling"
                 android:textStyle="bold"
                 android:textColor="@color/colorLightBlack"
-                android:textSize="20dp"
+                android:textSize="20sp"
                 android:layout_below="@id/card_search"
                 android:layout_marginTop="22dp"/>
 
@@ -125,7 +125,7 @@
                 android:layout_marginTop="15dp"
                 android:text="Near You"
                 android:textColor="@color/colorLightBlack"
-                android:textSize="20dp"
+                android:textSize="20sp"
                 android:textStyle="bold" />
 
             <TextView
