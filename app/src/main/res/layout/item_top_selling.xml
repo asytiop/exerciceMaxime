@@ -3,8 +3,8 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/linear_layout_item"
-    android:layout_width="150dp"
-    android:layout_height="200dp"
+    android:layout_width="180dp"
+    android:layout_height="215dp"
     android:paddingLeft="15dp"
     android:paddingTop="15dp">
 
@@ -12,10 +12,10 @@
         android:id="@+id/product_cardview"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:padding="16dp"
+        android:padding="25dp"
         app:cardElevation="0dp"
         app:cardBackgroundColor="@color/cardViewColor"
-        app:cardCornerRadius="25dp">
+        app:cardCornerRadius="33dp">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -26,11 +26,11 @@
                 android:id="@+id/text_fruit_name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="15dp"
+                android:layout_marginStart="24dp"
                 android:layout_marginTop="15dp"
                 android:text="Fruit"
                 android:textSize="20sp"
-                android:textColor="@android:color/black"
+                android:textColor="@color/colorLightBlack"
                 android:textStyle="bold" />
 
             <TextView
@@ -40,7 +40,8 @@
                 android:layout_below="@id/text_fruit_name"
                 android:layout_alignLeft="@id/text_fruit_name"
                 android:text="Price"
-                android:textColor="@android:color/black"
+                android:layout_marginTop="2dp"
+                android:textColor="@color/colorLightBlack"
                 android:textSize="15sp"
                 android:textStyle="bold" />
 
@@ -50,8 +51,8 @@
                 android:layout_alignBottom="@id/text_fruit_price"
                 android:layout_toEndOf="@id/text_fruit_price"
                 android:text=" each"
-                android:textColor="@android:color/black"
-                android:textSize="12sp" />
+                android:textColor="@color/colorLightBlack"
+                android:textSize="14sp" />
 
             <ImageView
                 android:id="@+id/image_fruit"
@@ -64,14 +65,14 @@
                 android:scaleType="centerInside" />
 
             <ImageView
-                android:layout_width="45dp"
-                android:layout_height="45dp"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
                 android:src="@drawable/ic_baseline_add_box_24"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentBottom="true"
-                android:layout_marginEnd="-7dp"
-                android:layout_marginBottom="-7dp"
-                android:alpha="0.5"/>
+                android:layout_marginEnd="-10dp"
+                android:layout_marginBottom="-10dp"
+                android:alpha="0.3"/>
 
         </RelativeLayout>
     </androidx.cardview.widget.CardView>
