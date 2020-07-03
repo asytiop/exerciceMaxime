@@ -2,6 +2,8 @@ package com.example.exercicemaxime.adapter
 
 import android.content.Context
 import android.graphics.Bitmap
+import android.graphics.Color
+import android.graphics.PorterDuff
 import android.graphics.drawable.Drawable
 import android.media.Image
 import android.net.Uri
@@ -13,6 +15,7 @@ import android.widget.TextView
 import androidx.annotation.Nullable
 import androidx.cardview.widget.CardView
 import androidx.core.content.ContextCompat
+import androidx.core.graphics.ColorUtils
 import androidx.palette.graphics.Palette
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
@@ -43,6 +46,7 @@ class ProductAdapter(val ctx: Context , private val dataSet: MutableList<Product
         val priceText: TextView
         val pictureImage: ImageView
         var cardView: CardView
+        var addImageView: ImageView
 
         init
         {
@@ -50,6 +54,7 @@ class ProductAdapter(val ctx: Context , private val dataSet: MutableList<Product
             priceText = mView.findViewById(R.id.text_fruit_price)
             pictureImage = mView.findViewById(R.id.image_fruit)
             cardView = mView.findViewById(R.id.product_cardview)
+            addImageView = mView.findViewById(R.id.image_fruit_add)
         }
     }
 
@@ -102,6 +107,9 @@ class ProductAdapter(val ctx: Context , private val dataSet: MutableList<Product
                             // Use generated instance
                             val color = p.getLightVibrantColor(ContextCompat.getColor(context, R.color.cardViewColor))
                             holder.cardView.setCardBackgroundColor(color)
+
+                            var colorAdd = p.getVibrantColor(ContextCompat.getColor(context, R.color.colorAddImage))
+                            holder.addImageView.setColorFilter(colorAdd)
                         }
                         return false
                     }

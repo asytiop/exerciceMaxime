@@ -12,40 +12,30 @@
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/app_bar_layout"
         android:layout_width="match_parent"
-        android:layout_height="80dp"
-        app:elevation="0dp"
-        android:translationZ="0.1dp"
+        android:layout_height="45dp"
+        android:elevation="0dp"
+
         >
+
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/topAppBar"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="70dp"
             android:background="@color/colorLightWhite"
-            >
 
+            app:navigationIcon="@drawable/ic_baseline_short_text_24">
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
                 <ImageButton
-                    android:layout_width="45dp"
-                    android:layout_height="45dp"
-                    android:scaleType="fitXY"
-                    android:src="@drawable/ic_baseline_short_text_24"
-                    android:background="@color/colorLightWhite"
-                    android:layout_alignTop="@id/imagebutton_cart"
-                    android:layout_centerVertical="true"
-                    android:layout_marginStart="-8dp"
-                    android:contentDescription="burger button" />
-                <ImageButton
-                    android:id="@+id/imagebutton_cart"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:scaleType="fitXY"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:src="@drawable/ic_outline_shopping_cart_24"
                     android:background="@android:color/white"
-                    android:layout_centerVertical="true"
+                    android:layout_marginTop="15dp"
                     android:layout_marginEnd="15dp"
-                    android:layout_alignParentEnd="true" />
+                    android:layout_alignParentEnd="true"
+                    android:contentDescription="cart button" />
 
                 </RelativeLayout>
         </androidx.appcompat.widget.Toolbar>

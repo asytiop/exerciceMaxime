@@ -8,4 +8,6 @@
     <color name="cardViewColor">#FFFFFF</color>
     <color name="colorLightBlack">#272727</color>
     <color name="colorSeeAll">#505050</color>
+    <color name="colorAddImage">#000000</color>
+    <color name="colorLightWhite">#ffffff</color>
 </resources>

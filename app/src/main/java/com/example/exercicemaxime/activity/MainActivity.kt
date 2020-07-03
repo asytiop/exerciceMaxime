@@ -7,6 +7,7 @@ import android.view.ViewManager
 import android.widget.Adapter
 import android.widget.LinearLayout
 import android.widget.TextView
+import androidx.appcompat.widget.Toolbar
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.exercicemaxime.R
@@ -17,6 +18,8 @@ import com.example.exercicemaxime.model.Shop
 import com.example.exercicemaxime.webservice.ParseAPI
 import com.example.exercicemaxime.webservice.ParseAPI.Companion.getAllProducts
 import com.example.exercicemaxime.webservice.ParseAPI.Companion.getAllShops
+import com.google.android.material.appbar.AppBarLayout
+import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -27,10 +30,14 @@ class MainActivity : AppCompatActivity() {
     private lateinit var shopRecyclerView: RecyclerView
     private lateinit var productAdapter: ProductAdapter
     private lateinit var shopAdapter: ShopAdapter
+    //private lateinit var toolbarLayout: AppBarLayout
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        //toolbarLayout = findViewById(R.id.app_bar_layout)
+        //toolbarLayout.elevation = 0F
         textView = findViewById(R.id.text_nbshops)
 
         productRecyclerView = findViewById(R.id.recycler_top_selling)
